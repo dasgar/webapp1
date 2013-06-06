@@ -1,2 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html><head><meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Hello world</title></head><body>Hello world!</body></html>
+<html><head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Hello world</title>
+
+<script type="text/javascript">
+function sayHello()
+{
+var $visitor = document.getElementById("visitor").value;
+if ($visitor.length == 0) {
+var $hi = "Hello world!"
+}
+else {
+var $hi = "Hello " + $visitor + "!"
+}
+//document.getElementById("hi").innerHTML="test";
+//document.getElementById("hi").innerHTML=$visitor;
+document.getElementById("hi").innerHTML=$hi;
+}
+</script>
+</head>
+<body>
+<p id="hi">Hello world!</p>
+<br>
+<input name="Name" id="visitor"><button value="Submit" name="Submit" onclick="sayHello()">Submit</button>
+</body></html>
